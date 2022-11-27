@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Direct Messager | CupiDately</title>
+	<link rel="icon" type="image/png" sizes="96x96" href="img/logo2.png">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/profile.css">
+    <!-- JS -->
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/jquery.mCustomScrollbar.min.js"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="profile.html" style="color:#ffffff">Profile</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="friends.html">Friends</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="chat.html">Direct</a>
+                </li>
+            </ul>
+        </div>
+        <div class="mx-auto order-0">
+            <a class="navbar-brand mx-auto" href="home.html"><img src="img/logo3.png" width="30" height="30" class="d-inline-block align-top" alt="">CupiDately</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+        <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" style="color:#ffffff" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					  Setting
+					</a>
+                    <div class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="user.html" style="color:#ffffff">Account</a>
+                        <a class="dropdown-item" href="privacy.html" style="color:#ffffff">Privacy</a>
+                        <a class="dropdown-item" href="#" style="color:#ffffff">Help & About</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="index.html" style="color:#ffffff">Logout</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+	<div class="container emp-profile">
+            <form method="post">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="profile-img">
+                            <img src="img/samuel.png" alt=""/>
+                            <div class="file btn btn-lg btn-primary">
+                                Change Photo
+                                <input type="file" name="file"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="profile-head">
+                                    <h5>Samuel Gamas</h5>
+                                    <a href="profile.html"<h6>@samuelgamas27</h6></a>
+									<br>
+                                    <div class="fa fa-map-marker" aria-hidden="true">
+										<h7>Bandung, Jawa Barat.</h7>
+									</div>
+                            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                <li class="nav-item">
+                                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">About</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Timeline</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <button class="btn btn--radius btn--blue" type="submit"><a href="user.html">Edit Profile</a> </button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="profile-work">
+                            <p>Kunjungi saya di:</p>
+                            <a href="https://www.facebook.com/samuel.gamas.94">Facebook</a><br/>
+                            <a href="https://twitter.com/gamassamuel27">Twitter</a><br/>
+                            <a href="https://www.instagram.com/gamassamuel/">Instagram</a>
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="tab-content profile-tab" id="myTabContent">
+                            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Username</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>@samuelgamas27</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Name</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>Samuel Gamas</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Email</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>gamasbloory@gmail.com</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Phone</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>082214528578</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Address</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>Gg. Senang Hati, Kota Bandung, Jawa Barat.</p>
+                                            </div>
+                                        </div>
+                            </div>
+                            <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Hobby</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>Membaca Buku, Bermain Bola, E-sport.</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Proffesion label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>Mahasiswa/Pelajar</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Place, Date of Birth</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>Garut, 27 July 2000</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Gender</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>M/MAlE</p>
+                                            </div>
+                                        </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <label>Bio</label><br/>
+                                        <p>Bahagia itu sederhana. contohnya liat kamu senyum.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>           
+        </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="js/popper.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/chart.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#action_menu_btn').click(function() {
+                $('.action_menu').toggle();
+            });
+        });
+    </script>
+</body>
+
+</html>

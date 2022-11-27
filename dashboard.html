@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<title>Dashboard | CupiDately</title>
+	<link rel="icon" type="image/png" sizes="96x96" href="img/logo2.png">
+
+	<!-- CSS -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="assets/css/light-bootstrap-dashboard.css?v=2.0.0 " rel="stylesheet" />
+
+	<!-- JS -->
+	<script type="text/javascript" src="js/loader.js"></script>
+    <script src="js/canvasjs.min.js"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="sidebar" data-color="blue" data-image="../assets/img/sidebar-5.jpg" style="background-image: url(img/cute.jpg);">
+
+            <div class="sidebar-wrapper">
+                <div class="logo">
+                    <a href="home.html" class="simple-text">
+                        CupiDately
+                    </a>
+                </div>
+                <ul class="nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="dashboard.html">
+                            <i class="nc-icon nc-chart-pie-35"></i>
+                            <p>Dashboard</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="user.html">
+                            <i class="nc-icon nc-circle-09"></i>
+                            <p>User Profile</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="maps.html">
+                            <i class="nc-icon nc-pin-3"></i>
+                            <p>Maps</p>
+                        </a>
+                    </li>
+
+                    <li class="nav-item active active-pro">
+                        <a class="nav-link active" href="home.html">
+                            <i class="nc-icon nc-grid-45"></i>
+                            <p>Back To Main Menu</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="main-panel">
+
+            <div class="content">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="card ">
+                                <div class="card-header ">
+                                    <h4 class="card-title">Statistik Like & Dislike Mingguan</h4>
+                                    <p class="card-category">Laporan Minggu Kemarin</p>
+                                </div>
+                                <div class="card-body ">
+                                    <div id="chartPreferences" class="ct-chart ct-perfect-fourth">
+                                        <div id="piechart"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card ">
+                                <div class="card-header ">
+                                    <h4 class="card-title">Statistik Total User Like, Dislike & Pengunjung Profil</h4>
+                                    <p class="card-category">Laporan Minggu Kemarin</p>
+                                </div>
+                                <div class="card-body ">
+                                    <div id="chartHours" class="ct-chart"></div>
+                                    <div id="chartContainer" style="height: 360px; width: 100%;"></div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <footer class="footer">
+                <div class="container-fluid">
+                    <nav>
+                        <ul class="footer-menu">
+                            <li>
+                                <a href="#">
+                                    Home
+                                </a>
+                            </li>
+
+                        </ul>
+                        <p class="copyright text-center">
+                            ©
+                            <script>
+                                document.write(new Date().getFullYear())
+                            </script>
+                            <a href="#">CupiDately</a>, made with love for a better future!
+                        </p>
+                    </nav>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+		<!-- jQuery JS-->
+		<script src="../assets/js/core/jquery.3.2.1.min.js" type="text/javascript"></script>
+		<script src="../assets/js/core/popper.min.js" type="text/javascript"></script>
+		<script src="../assets/js/core/bootstrap.min.js" type="text/javascript"></script>
+
+		<script src="../assets/js/plugins/bootstrap-switch.js"></script>
+
+		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
+
+		<script src="../assets/js/plugins/chartist.min.js"></script>
+
+		<script src="../assets/js/plugins/bootstrap-notify.js"></script>
+
+		<script src="../assets/js/light-bootstrap-dashboard.js?v=2.0.0 " type="text/javascript"></script>
+		<script type="text/javascript">
+			google.charts.load('current', {
+				'packages': ['corechart']
+			});
+			google.charts.setOnLoadCallback(drawChart);
+
+			function drawChart() {
+				var data = google.visualization.arrayToDataTable([
+					['Categories', 'Rating'],
+					['Like', 564],
+					['Dislike', 256]
+				]);
+
+				var options = {
+					'width': 485,
+					'height': 365
+				};
+
+				var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+				chart.draw(data, options);
+			}
+		</script>
+
+		<script>
+			window.onload = function() {
+
+				var chart = new CanvasJS.Chart("chartContainer", {
+					animationEnabled: true,
+
+					axisY: {
+						valueFormatString: "#0,.",
+						suffix: "k"
+					},
+					axisX: {
+						title: "Hari"
+					},
+					toolTip: {
+						shared: true
+					},
+					data: [{
+							type: "stackedArea",
+							showInLegend: true,
+							toolTipContent: "<span style=\"color:#4F81BC\"><strong>{name}: </strong></span> {y}",
+							name: "Like",
+							dataPoints: [{
+								x: 1,
+								y: 20
+							}, {
+								x: 2,
+								y: 65
+							}, {
+								x: 3,
+								y: 132
+							}, {
+								x: 4,
+								y: 542
+							}, {
+								x: 5,
+								y: 102
+							}, {
+								x: 6,
+								y: 54
+							}, {
+								x: 7,
+								y: 256
+							}]
+						}, {
+							type: "stackedArea",
+							name: "Dislike",
+							toolTipContent: "<span style=\"color:#C0504E\"><strong>{name}: </strong></span> {y}",
+							showInLegend: true,
+							dataPoints: [{
+								x: 1,
+								y: 31
+							}, {
+								x: 2,
+								y: 10
+							}, {
+								x: 3,
+								y: 60
+							}, {
+								x: 4,
+								y: 350
+							}, {
+								x: 5,
+								y: 250
+							}, {
+								x: 6,
+								y: 150
+							}, {
+								x: 7,
+								y: 124
+							}]
+						},
+
+						{
+							type: "stackedArea",
+							name: "Pengunjung Profil",
+							toolTipContent: "<span style=\"color:#2E8B57\"><strong>{name}: </strong></span> {y}<br><b>Total:<b> #total",
+							showInLegend: true,
+							dataPoints: [{
+								x: 1,
+								y: 10
+							}, {
+								x: 2,
+								y: 42
+							}, {
+								x: 3,
+								y: 87
+							}, {
+								x: 4,
+								y: 459
+							}, {
+								x: 5,
+								y: 269
+							}, {
+								x: 6,
+								y: 159
+							}, {
+								x: 7,
+								y: 204
+							}]
+						}
+					]
+				});
+				chart.render();
+
+			}
+		</script>
+</html>

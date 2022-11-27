@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Direct Messager | CupiDately</title>
+	<link rel="icon" type="image/png" sizes="96x96" href="img/logo2.png">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/chat.css">
+    <!-- JS -->
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.mCustomScrollbar.min.js"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="profile.html">Profile</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="friends.html">Friends</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="chat.html" style="color:#ffffff">Direct</a>
+                </li>
+            </ul>
+        </div>
+        <div class="mx-auto order-0">
+            <a class="navbar-brand mx-auto" href="home.html"><img src="img/logo3.png" width="30" height="30" class="d-inline-block align-top" alt="">CupiDately</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+        <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" style="color:#ffffff" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					  Setting
+					</a>
+                    <div class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="user.html" style="color:#ffffff">Account</a>
+                        <a class="dropdown-item" href="privacy.html" style="color:#ffffff">Privacy</a>
+                        <a class="dropdown-item" href="#" style="color:#ffffff">Help & About</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="index.html" style="color:#ffffff">Logout</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container-fluid h-100">
+        <div class="row justify-content-center h-100">
+            <div class="col-md-4 col-xl-3 chat">
+                <div class="card mb-sm-3 mb-md-0 contacts_card">
+                    <div class="card-header">
+                        <div class="input-group">
+                            <input type="text" placeholder="Search..." name="" class="form-control search">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text search_btn"><i class="fa fa-search"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body contacts_body">
+                        <ui class="contacts">
+                            <li class="active">
+                                <div class="d-flex bd-highlight">
+                                    <div class="img_cont">
+                                        <img src="img/Jennie.png" class="rounded-circle user_img">
+                                        <span class="online_icfa fa-barson"></span>
+                                    </div>
+                                    <div class="user_info">
+                                        <span>Jennie</span>
+                                        <p>Jennie is online</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="d-flex bd-highlight">
+                                    <div class="img_cont">
+                                        <img src="img/Lisa.png" class="rounded-circle user_img">
+                                        <span class="online_icon offline"></span>
+                                    </div>
+                                    <div class="user_info">
+                                        <span>Lisa</span>
+                                        <p>Lisa left 7 mins ago</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="d-flex bd-highlight">
+                                    <div class="img_cont">
+                                        <img src="img/Kim Hye Yoon.png" class="rounded-circle user_img">
+                                        <span class="online_icon"></span>
+                                    </div>
+                                    <div class="user_info">
+                                        <span>Kim Hye Yoon</span>
+                                        <p>Kim Hye Yoon is online</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="d-flex bd-highlight">
+                                    <div class="img_cont">
+                                        <img src="img/Lee na Eun.png" class="rounded-circle user_img">
+                                        <span class="online_icon offline"></span>
+                                    </div>
+                                    <div class="user_info">
+                                        <span>Lee Na Eun</span>
+                                        <p>Lee Na Eun left 30 mins ago</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="d-flex bd-highlight">
+                                    <div class="img_cont">
+                                        <img src="img/Kim Ji In.png" class="rounded-circle user_img">
+                                        <span class="online_icon offline"></span>
+                                    </div>
+                                    <div class="user_info">
+                                        <span>Kim Ji In</span>
+                                        <p>Kim Ji In left 50 mins ago</p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ui>
+                    </div>
+                    <div class="card-footer"></div>
+                </div>
+            </div>
+            <div class="col-md-8 col-xl-6 chat">
+                <div class="card">
+                    <div class="card-header msg_head">
+                        <div class="d-flex bd-highlight">
+                            <div class="img_cont">
+                                <img src="img/Jennie.png" class="rounded-circle user_img">
+                                <span class="online_icon"></span>
+                            </div>
+                            <div class="user_info">
+                                <span>Jennie</span>
+                                <p>1767 Messages</p>
+                            </div>
+                            <div class="video_cam">
+                                <span><i class="fa fa-video-camera"></i></span>
+                                <span><i class="fa fa-phone"></i></span>
+                            </div>
+                        </div>
+                        <span id="action_menu_btn"><i class="fa fa-bars"></i></span>
+                        <div class="action_menu">
+                            <ul>
+                                <li><i class="fa fa-user-circle"></i> View profile</li>
+                                <li><i class="fa fa-flag"></i> Report</li>
+                                <li><i class="fa fa-ban"></i> Block</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card-body msg_card_body">
+                        <div class="d-flex justify-content-start mb-4">
+                            <div class="img_cont_msg">
+                                <img src="img/Jennie.png" class="rounded-circle user_img_msg">
+                            </div>
+                            <div class="msg_cotainer">
+                                Hi Samuel, lagi apa?
+                                <span class="msg_time">6:12 PM, Today</span>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-end mb-4">
+                            <div class="msg_cotainer_send">
+                                Hi, lagi diem aja nih. Kamu?
+                                <span class="msg_time_send">6:15 PM, Today</span>
+                            </div>
+                            <div class="img_cont_msg">
+                                <img src="img/Samuel.png" class="rounded-circle user_img_msg">
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-start mb-4">
+                            <div class="img_cont_msg">
+                                <img src="img/Jennie.png" class="rounded-circle user_img_msg">
+                            </div>
+                            <div class="msg_cotainer">
+                                Lagi diem juga hehe. Jalan Yuk!
+                                <span class="msg_time">6:15 PM, Today</span>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-end mb-4">
+                            <div class="msg_cotainer_send">
+                                Hahaha, Yuk. Kemana ya?
+                                <span class="msg_time_send">6:17 PM, Today</span>
+                            </div>
+                            <div class="img_cont_msg">
+                                <img src="img/Samuel.png" class="rounded-circle user_img_msg">
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-start mb-4">
+                            <div class="img_cont_msg">
+                                <img src="img/Jennie.png" class="rounded-circle user_img_msg">
+                            </div>
+                            <div class="msg_cotainer">
+                                Yeay, gimana kalo nonton?
+                                <span class="msg_time">6:17 PM, Today</span>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-end mb-4">
+                            <div class="msg_cotainer_send">
+                                Boleh. Aku siap siap dulu ya
+                                <span class="msg_time_send">6:18 PM, Today</span>
+                            </div>
+                            <div class="img_cont_msg">
+                                <img src="img/Samuel.png" class="rounded-circle user_img_msg">
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-start mb-4">
+                            <div class="img_cont_msg">
+                                <img src="img/Jennie.png" class="rounded-circle user_img_msg">
+                            </div>
+                            <div class="msg_cotainer">
+                                Okedehhh
+                                <span class="msg_time">6:18 PM, Today</span>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-start mb-4">
+                            <div class="img_cont_msg">
+                                <img src="img/Jennie.png" class="rounded-circle user_img_msg">
+                            </div>
+                            <div class="msg_cotainer">
+                                Aku juga siap siap dulu. See you samuel
+                                <span class="msg_time">6:19 PM, Today</span>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-end mb-4">
+                            <div class="msg_cotainer_send">
+                                See you
+                                <span class="msg_time_send">6:20 PM, Today</span>
+                            </div>
+                            <div class="img_cont_msg">
+                                <img src="img/Samuel.png" class="rounded-circle user_img_msg">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-footer">
+                        <div class="input-group">
+                            <div class="input-group-append">
+                                <span class="input-group-text attach_btn"><i class="fa fa-paperclip"></i></span>
+                            </div>
+                            <textarea name="" class="form-control type_msg" placeholder="Type your message..."></textarea>
+                            <div class="input-group-append">
+                                <span class="input-group-text send_btn"><i class="fa fa-location-arrow"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="js/popper.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/chart.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#action_menu_btn').click(function() {
+                $('.action_menu').toggle();
+            });
+        });
+    </script>
+</body>
+
+</html>
